@@ -1,0 +1,27 @@
+{
+  "name": "youtube-playlist-search",
+  "version": "1.0.0",
+  "description": "Searches over title and description of videos in an specific playlist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nisevi/youtube-playlist-search.git"
+  },
+  "keywords": [
+    "youtube"
+  ],
+  "author": "Nicolas Sebastian Vidal <nicolas.s.vidal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nisevi/youtube-playlist-search/issues"
+  },
+  "homepage": "https://github.com/nisevi/youtube-playlist-search#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "xhr": "^2.4.1",
+    "xml2js": "^0.4.19"
+  }
+}
