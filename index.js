@@ -21,7 +21,7 @@ module.exports = function (term, opts, cb) {
     part: opts.part || 'snippet,contentDetails',
     maxResults: opts.maxResults || 30
   };
-
+  var regexp = new RegExp(params.q, "gi");
   Object.keys(opts).map(function (k) {
     if (allowedProperties.indexOf(k) > -1) params[k] = opts[k]
   });
@@ -46,22 +46,27 @@ module.exports = function (term, opts, cb) {
         prevPageToken: result.prevPageToken
       };
 
-      var findings = result.items.map(function (item) {
-        return {
-          id: item.snippet.resourceId.videoId,
-          link: 'https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId,
-          kind: item.kind,
-          etag: item.etag,
-          publishedAt: item.snippet.publishedAt,
-          channelId: item.snippet.channelId,
-          channelTitle: item.snippet.channelTitle,
-          title: item.snippet.title,
-          description: item.snippet.description,
-          thumbnails: item.snippet.thumbnails,
-          playlistId: item.snippet.playlistId,
-          position: item.snippet.position
+      var findings = result.items.reduce(function (allItems, item) {
+        var description = item.snippet.description;
+        var title = item.snippet.title;
+        if (regexp.test(title.concat(description))) {
+          allItems.push({
+            id: item.snippet.resourceId.videoId,
+            link: 'https://www.youtube.com/watch?v=' + item.snippet.resourceId.videoId,
+            kind: item.kind,
+            etag: item.etag,
+            publishedAt: item.snippet.publishedAt,
+            channelId: item.snippet.channelId,
+            channelTitle: item.snippet.channelTitle,
+            title: item.snippet.title,
+            description: item.snippet.description,
+            thumbnails: item.snippet.thumbnails,
+            playlistId: item.snippet.playlistId,
+            position: item.snippet.position
+          });
         }
-      });
+        return allItems;
+      }, []);
 
       return cb(null, findings, pageInfo)
     } catch(e) {
