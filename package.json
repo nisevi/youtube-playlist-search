@@ -1,6 +1,6 @@
 {
   "name": "youtube-playlist-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Searches over title and description of videos in an specific playlist.",
   "main": "index.js",
   "scripts": {
