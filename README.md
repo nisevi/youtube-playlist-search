@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/youtube-playlist-search.svg)](https://badge.fury.io/js/youtube-playlist-search)
+
 # youtube-playlist-search
 
 Searches over title and description of videos in an specific playlist.
