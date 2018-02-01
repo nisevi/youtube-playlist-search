@@ -7,7 +7,8 @@ var allowedProperties = [
   'key',
   'maxResults',
   'part',
-  'playlistId'
+  'playlistId',
+  'pageToken'
 ];
 
 module.exports = function (term, opts, cb) {

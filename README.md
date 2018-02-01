@@ -18,14 +18,14 @@ This library was born as a need for retrieving info from a specific YouTuBe play
       This parameter is required.
 
   - maxResults
-    - unsigned integer
+    - **unsigned integer**
     
       The **maxResults** parameter specifies the maximum number of items that should be returned in the result set. Acceptable values are 0 to 50, inclusive. The default value is 5.
 
       Default value **30**.
 
   - part
-    - string
+    - **string**
     
       The **part** parameter specifies a comma-separated list of one or more **playlistItem** resource properties that the API response will include.
       
@@ -40,11 +40,16 @@ This library was born as a need for retrieving info from a specific YouTuBe play
       Default value **'snippet,contentDetails'**
 
   - playlistId
-    - string
+    - **string**
     
       The **playlistId** parameter specifies the unique ID of the playlist for which you want to retrieve playlist items. Note that even though this is an optional parameter, every request to retrieve playlist items must specify a value for either the id parameter or the playlistId parameter.
 
       This parameter is required.
+
+  - pageToken
+    - **string**
+
+      The **pageToken** parameter identifies a specific page in the result set that should be returned. In an API response, the **nextPageToken** and **prevPageToken** properties identify other pages that could be retrieved.
 
 These parameters are based on the ones specified for the [playlistItem YouTuBe API](https://developers.google.com/youtube/v3/docs/playlistItems), except from **key** (the API key that I'm using for making the request) and from **term** which I'm using for filtering the results that come in the response.
 
