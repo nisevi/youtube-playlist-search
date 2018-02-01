@@ -50,7 +50,7 @@ These parameters are based on the ones specified for the [playlistItem YouTuBe A
 
 [Here](https://github.com/nisevi/scrums/blob/master/src/App.js) is an example of how I'm using it:
 
-```
+```javascript
 import _ from 'lodash';
 import YTSearch from 'youtube-playlist-search';
 import React, { Component } from 'react';
