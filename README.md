@@ -10,6 +10,10 @@ This library was born as a need for retrieving info from a specific YouTuBe play
 
 `yarn add youtube-playlist-search`
 
+or
+
+`npm install youtube-playlist-search`
+
 # Supported parameters
 
   - key
