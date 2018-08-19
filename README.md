@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/youtube-playlist-search.svg)](https://badge.fury.io/js/youtube-playlist-search)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fnisevi%2Fyoutube-playlist-search.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fnisevi%2Fyoutube-playlist-search?ref=badge_shield)
 
 # youtube-playlist-search
 
@@ -123,3 +124,6 @@ class App extends Component {
 
 export default App;
 ``` 
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fnisevi%2Fyoutube-playlist-search.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fnisevi%2Fyoutube-playlist-search?ref=badge_large)
