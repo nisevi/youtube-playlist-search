@@ -5,7 +5,7 @@
 
 Searches over title and description of videos in an specific playlist.
 
-This library was born as a need for retrieving info from a specific YouTuBe playlist and search over their results. At this point, as I'm learning React it was easier for me to code this library and use it, than to code this functionality inside the [React APP](https://github.com/nisevi/scrums).
+This library was born as a need for retrieving info from a specific YouTuBe playlist and search over their results.
 
 # Installation
 
